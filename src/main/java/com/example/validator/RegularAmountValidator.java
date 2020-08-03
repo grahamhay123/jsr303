@@ -20,14 +20,6 @@ public class RegularAmountValidator implements
     public void initialize(RegularAmountConstraint regularAmount) {
     }
 
-/*
-    public boolean isValid(String contactField,
-                           ConstraintValidatorContext cxt) {
-        return contactField != null && contactField.matches("[0-9]+")
-                && (contactField.length() > 8) && (contactField.length() < 14);
-    }
-*/
-
     @Override
     public boolean isValid(RegularAmount regularAmount,
                            ConstraintValidatorContext cxt) {

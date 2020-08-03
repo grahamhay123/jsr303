@@ -13,8 +13,6 @@ import java.util.regex.Pattern;
 
 public class RegularAmountValidator implements
         ConstraintValidator<RegularAmountConstraint, RegularAmount> {
-//        ConstraintValidator<RegularAmountConstraint, Object> {
-
 
     @Override
     public void initialize(RegularAmountConstraint regularAmount) {

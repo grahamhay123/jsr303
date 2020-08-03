@@ -100,7 +100,7 @@ class Jsr303assignmentApplicationTests {
 		return Stream.of(
 				Arguments.of(2, "22.22"),
 				Arguments.of(4, "44.44"),
-				Arguments.of(13, "144.33"),
+				Arguments.of(13, "144.43"),
 				Arguments.of(52, "577.72")
 		);
 	}

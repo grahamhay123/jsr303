@@ -6,6 +6,8 @@ import com.example.jsr303assignment.RegularAmount;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.regex.Pattern;
 
 
@@ -47,9 +49,14 @@ public class RegularAmountValidator implements
             double regularAmt = Double.parseDouble(amountString);
             int weeks = regularAmount.getFrequency().weeks;
 
-            // Calculate weekly amount
-            double weeklyAmount = regularAmt/weeks;
-
+            // Convert to BigDecimals to perform precision division
+            BigDecimal aDec = BigDecimal.valueOf(regularAmt);
+            BigDecimal bigDecWeeks = BigDecimal.valueOf((long)weeks);
+            // Calculate weekly amount using BigDecimal values to avoid precision errors when dividing
+            // Round up to 3 decimal places to see if the value is not divisible to just 2 decimal places signifying whole pence
+            BigDecimal weeklyAmountDec = aDec.divide(bigDecWeeks, 3, RoundingMode.HALF_UP);
+            // Remove trailing zeros
+            double weeklyAmount = weeklyAmountDec.doubleValue();
             // Find the number of decimal places in weekly amount
             String weeklyAmountString = Double.toString(Math.abs(weeklyAmount));
             int integerPart = weeklyAmountString.indexOf('.');

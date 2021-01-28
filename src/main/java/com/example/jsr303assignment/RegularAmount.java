@@ -4,7 +4,6 @@ import com.example.validator.RegularAmountConstraint;
 import org.springframework.stereotype.Component;
 
 @RegularAmountConstraint
-@Component
 public class RegularAmount {
     private Frequency frequency;
     private String amount;

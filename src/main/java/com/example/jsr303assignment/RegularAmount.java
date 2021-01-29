@@ -1,7 +1,6 @@
 package com.example.jsr303assignment;
 
 import com.example.validator.RegularAmountConstraint;
-import org.springframework.stereotype.Component;
 
 @RegularAmountConstraint
 public class RegularAmount {

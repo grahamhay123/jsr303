@@ -8,6 +8,7 @@ public class RegularAmount {
     private String amount;
     
     private String DEVELOPER_UPDATE;
+    private String DEVELOPER_UPDATE2;
 
     public Frequency getFrequency() {
         return frequency;

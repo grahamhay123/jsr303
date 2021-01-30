@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 public class RegularAmount {
     private Frequency frequency;
     private String amount;
+    
+    private String DEVELOPER_UPDATE;
 
     public Frequency getFrequency() {
         return frequency;

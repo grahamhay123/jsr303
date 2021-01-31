@@ -1,7 +1,6 @@
 package com.example.jsr303assignment;
 
 import com.example.validator.RegularAmountConstraint;
-import org.springframework.stereotype.Component;
 
 @RegularAmountConstraint
 public class RegularAmount {
@@ -11,6 +10,7 @@ public class RegularAmount {
     private String DEVELOPER_UPDATE;
     private String DEVELOPER_UPDATE3_LOCAL;
 
+    private String DEVELOPER_UPDATE2;
 
     public Frequency getFrequency() {
         return frequency;

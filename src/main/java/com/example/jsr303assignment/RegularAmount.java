@@ -15,6 +15,7 @@ public class RegularAmount {
     private String DEVELOPER_UPDATE6;
     private String DEVELOPER_UPDATE7;
     private String DEVELOPER_UPDATE8;
+    private String DEVELOPER_UPDATE9;
     
 
     public Frequency getFrequency() {

@@ -14,6 +14,8 @@ public class RegularAmount {
         return frequency;
     }
 
+    private String REMOTE_COMMIT;
+    
     public void setFrequency(Frequency frequency) {
         this.frequency = frequency;
     }

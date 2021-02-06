@@ -7,8 +7,6 @@ public class RegularAmount {
     private Frequency frequency;
     private String amount;
     
-    private String DEVELOPER_UPDATE1;
-
     public Frequency getFrequency() {
         return frequency;
     }

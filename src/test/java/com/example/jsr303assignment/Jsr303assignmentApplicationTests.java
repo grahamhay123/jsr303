@@ -19,6 +19,8 @@ class Jsr303assignmentApplicationTests {
 
 	@Autowired
 	private RegularAmount regularAmount;
+	
+	private String REMOTE_COMMIT;
 
 	private Set<ConstraintViolation<RegularAmount>> regularAmountViolations() {
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();

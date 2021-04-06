@@ -7,19 +7,22 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import javax.validation.*;
 import java.util.Set;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+// Used by Selenium already
+import junit.framework.Assert;
 
 @SpringBootTest(classes = {RegularAmount.class})
 class Jsr303assignmentApplicationTests {
 
 	@Autowired
 	private RegularAmount regularAmount;
-	
+
 	private Set<ConstraintViolation<RegularAmount>> regularAmountViolations() {
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 		Set<ConstraintViolation<RegularAmount>> violations = validator.validate(regularAmount);
@@ -140,7 +143,18 @@ class Jsr303assignmentApplicationTests {
 		regularAmount.setAmount(nonDivisibleAmount);
 
 		// Then a validation error is produced
-		assertTrue(regularAmountViolations().size() == 1);
+		assertEquals(regularAmountViolations().size(), 1);
+
+		// Example using junit.framework.Assert
+		String Var1 = "Var1";
+		String Var2= "Var2";
+		String Var3 = "Var3";
+		String Var4 = "Var4";
+
+		String formattedResult = String.format("first=%s and second=%s and third=%s and fourth=%s",Var1,Var2,Var3,Var4);
+
+		Assert.assertEquals("Did not get a match",
+				"first=Var1 and second=Var2 and third=Var3 and fourth=Var4", formattedResult);
 
 	}
 

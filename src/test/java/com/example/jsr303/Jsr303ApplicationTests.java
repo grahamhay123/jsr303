@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // Used by Selenium already
-import junit.framework.Assert;
+import org.junit.Assert;
+
 
 @SpringBootTest(classes = {RegularAmount.class})
 class Jsr303ApplicationTests {

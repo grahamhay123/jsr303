@@ -146,7 +146,7 @@ class Jsr303ApplicationTests {
 		// Then a validation error is produced
 		assertEquals(regularAmountViolations().size(), 1);
 
-		// Example using junit.framework.Assert
+		// Example using org.junit.Assert as used in Selenium code
 		String Var1 = "Var1";
 		String Var2= "Var2";
 		String Var3 = "Var3";
